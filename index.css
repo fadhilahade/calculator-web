@@ -1,0 +1,105 @@
+html {
+    background: #100a1c;
+    background-image: radial-gradient(50% 30% ellipse at center top, #201e40 0%, rgba(0, 0, 0, 0) 100%), radial-gradient(60% 50% ellipse at center bottom, #261226 0%, #100a1c 100%);
+    background-attachment: fixed;
+    color: #6cacc5;
+}
+
+body {
+    color: #6cacc5;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 5em 0 2em;
+    text-align: center;
+}
+
+h1 {
+    font-weight: 300;
+    margin: 0;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+.calculator {
+    font-size: 28px;
+    margin: 0 auto;
+    width: 10em;
+}
+
+.calculator::before,
+.calculator::after {
+    content: " ";
+    display: table;
+}
+
+.calculator::after {
+    clear: both;
+}
+
+.viewer {
+    color: #c97874;
+    line-height: 3em;
+    text-align: right;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 7.5em;
+    height: 3em;
+}
+
+button {
+    border: 0;
+    background-color: rgba(42, 50, 113, 0.28);
+    color: #6cacc5;
+    cursor: pointer;
+    float: left;
+    font: inherit;
+    width: 2em;
+    height: 2em;
+    transition: all 0.5s;
+    margin: 5px;
+}
+
+button:hover {
+    background: #201e40;
+}
+
+button:focus {
+    outline: 0;
+}
+
+.ops:focus::after {
+    content: attr(data-ops);
+    margin-left: -210px;
+    width: 420px;
+}
+
+.equal:focus::after {
+    content: attr(data-result);
+    margin-left: -300px;
+    width: 600px;
+}
+
+.reset {
+    background: rgba(201, 120, 116, .28);
+    color: #c97874;
+    font-weight: 400;
+    margin-left: -77px;
+    padding: 0.5em 1em;
+    position: absolute;
+    top: -20em;
+    left: 50%;
+    width: auto;
+    height: auto;
+}
+
+.reset:hover {
+    background: #c97874;
+    color: #100a1c;
+}
+
+.reset.show {
+    top: 20em;
+}
