@@ -9,8 +9,8 @@
     }
 
     //variables
-    let viewer = elem(".viewer"),
-        equal = elem(".equal"),
+    let viewer = elem("#viewer"),
+        equal = elem("#equal"),
         num = elem(".number"),
         ops = elem(".ops"),
         theNumber = "",

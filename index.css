@@ -44,7 +44,7 @@ p {
     line-height: 3em;
     text-align: right;
     text-overflow: ellipsis;
-    overflow: hidden;
+    /* overflow: hidden; */
     width: 7.5em;
     height: 3em;
 }
